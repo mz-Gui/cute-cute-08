@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/*Resetando Regras CSS*/
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    outline: none;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
+
+/*Cores Usadas*/
+:root{
+    --cor1: #b45252;
+    --cor2: #A31621;
+    --cor3: #A6b1e1;
+    --cor4: #415a77;
+    --cor5: #f6f1d1;
+    --cor6: #f5edb9;
+    --cor7: #F4F3EF;
+}
+
+html, body{
+    width: 100%;
+    background-color: var(--cor5);
+}
+
+header{
+    width: 100%;
+    height: 400px;
+    background-color: var(--cor1);
+}
+
+.content{
+    max-width: 1000px;
+    min-width: 300px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+
+.content .titulo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    color: var(--cor5);
+}
+
+.content .titulo h1{
+    font-family: 'Caveat', cursive;
+}
+
+.content .header-block{
+    max-width: 1000px;
+    min-width: 300px;
+    height: 450px;
+    border-radius: 8px;
+    background-color: var(--cor2);
+    padding: 10px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 150px;
+    position: relative;
+    z-index: 10;
+}
+
+.content .header-block .img-content{
+    width: 35%;
+    margin: 10px;
+    background-color: var(--cor1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px
+}
+
+.content .header-block img{
+    width: 95%;
+    padding: 10px;
+}
+
+.content .header-block .img-content p{
+    padding: 10px;
+    text-align: center;
+}
+
+.content .header-block p{
+    color: var(--cor6);
+    padding: 10px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.5em;
+}
+
+/*MAIN CONTENT*/
+
+.main-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carta{
+    background-color: var(--cor6);
+    max-width: 1000px;
+    padding: 175px 50px 50px 70px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.carta h2{
+    padding: 10px;
+    font-family: 'Caveat', cursive;
+    font-size: 2em;
+}
+
+.carta h3{
+    text-align: end;
+    padding: 15px;
+    font-family: 'Caveat', cursive;
+    font-size: 1.75em;
+}
+
+.carta p{
+    padding: 8px;
+    text-align: justify;
+}
