@@ -25,6 +25,7 @@
 html, body{
     width: 100%;
     background-color: var(--cor5);
+    overflow-x: hidden;
 }
 
 header{
@@ -62,7 +63,7 @@ header{
     max-width: 1000px;
     min-width: 300px;
     height: 450px;
-    border-radius: 8px;
+    border-radius: 12px;
     background-color: var(--cor2);
     padding: 10px;
 
@@ -82,17 +83,22 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 8px
+    border-radius: 12px
 }
 
 .content .header-block img{
     width: 95%;
     padding: 10px;
+    border-radius: 12px
 }
 
 .content .header-block .img-content p{
     padding: 10px;
     text-align: center;
+}
+
+.content .header-block .img-content img{
+    border-radius: 12px
 }
 
 .content .header-block p{
@@ -108,8 +114,10 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
+/*CARTINHA*/
 .carta{
     background-color: var(--cor6);
     max-width: 1000px;
@@ -135,4 +143,324 @@ header{
 .carta p{
     padding: 8px;
     text-align: justify;
+}
+
+/*FOTOS*/
+.fotos{
+    width: 100%;
+}
+
+.fotos h2{
+    padding: 50px;
+    background-color: var(--cor1);
+    font-family: 'Caveat', cursive;
+    font-size: 2em;
+    color:var(--cor5);
+    text-align: center;
+}
+
+.fotos p{
+    padding: 8px;
+    text-align: center;
+}
+
+.fotos p:first-child{
+    padding-top: 50px;
+}
+
+.fotos p:last-child{
+    padding-bottom: 50px;
+}
+
+.foto-container{
+    position: relative;
+    padding: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: var(--cor6);
+    border-radius: 12px;
+}
+
+.foto-wrapper{
+    overflow-x: auto;
+}
+
+.galeria{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 15px;
+}
+
+.arrow-left, .arrow-right{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: auto;
+    bottom: 0;
+    font-size: 1.5em;
+    line-height: 250px;
+    width: 40px;
+    text-align: center;
+    color: var(--cor6);
+    cursor: pointer;
+    border: none;
+    background: linear-gradient(to left, transparent 0%, black 200%);
+    opacity: 0.1;
+    transition: all .5s ease-in-out;
+}
+
+.arrow-right{
+    left: auto;
+    right: 0;
+    z-index: 10;
+    background: linear-gradient(to right, transparent 0%, black 200%);
+}
+
+.arrow-left:hover, .arrow-right:hover{
+    opacity: 1;
+}
+
+.item{
+    max-width: 250px;
+    max-height: 250px;
+    flex-shrink: 0;
+    opacity: 0.6;
+    transition: all .5s ease-in-out;
+}
+
+.current-item{
+    opacity: 1;
+    border: 5px solid var(--cor1);
+}
+
+.foto-wrapper::-webkit-scrollbar {
+    display: none;
+}
+  
+.example {
+    -ms-overflow-style: none;  
+    scrollbar-width: none;
+}
+
+/*PLAYLISTS LINKS*/
+
+.playlists{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulinho{
+    width: 100%;
+}
+
+.playlists .titulinho h2{
+    width: 100%;
+    padding: 50px;
+    background-color: var(--cor2);
+    color: var(--cor6);
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 2em;
+}
+
+.playlists .titulinho p{
+    width: 100%;
+    padding: 50px;
+    background-color: var(--cor1);
+    color: var(--cor6);
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 1.2em;
+    border-radius: 0px 0px 12px 12px;
+}
+
+.linkin-park{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--cor6);
+    max-width: 1000px;
+    padding: 50px;
+}
+
+.linkin-park a{
+    text-decoration: none;
+    color:var(--cor2);
+    padding: 25px;
+
+}
+
+.linkin-park a:hover{
+    text-decoration: underline;
+}
+
+
+.playlists .little{
+    max-width: 1000px;
+    text-align: center;
+    background-color: var(--cor6);
+    padding: 15px;
+}
+
+.playlists .little p{
+    padding: 12px;
+}
+
+/*NOTES*/
+
+.notas{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.notas-container{
+    max-width: 1000px;
+    background-color: var(--cor6);
+    padding: 50px;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.notas h2{
+    width: 100%;
+    padding: 50px;
+    background-color: var(--cor2);
+    color: var(--cor6);
+    text-align: center;
+    font-family: 'Caveat', cursive;
+    font-size: 2em;
+}
+
+.notas-write p{
+    padding: 8px;
+}
+
+.notas-write{
+    padding-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+.penguin{
+    background-color: var(--cor2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.penguin img{
+    width: 95%;
+    margin: 10px;
+    background-color: var(--cor1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+}
+
+.penguin p{
+    background-color: var(--cor2);
+    color: var(--cor6);
+    font-family: 'Caveat', cursive;
+    font-size: 1.2em;
+}
+
+/*FOOTER*/
+
+footer{
+    width: 100%;
+    background-color: var(--cor2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75em;
+
+}
+
+
+.footer-container{
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    color: var(--cor6);
+    padding: 25px;
+}
+
+.fim{
+    width: 50%;
+    display: flex ;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.copy{
+    width: 50%;
+    text-align: end;
+    padding: 25px;
+}   
+
+
+@media screen and (max-width:628px) {
+    .content .header-block .img-content{
+        width: 50%;
+    }
+
+    .content .header-block p{
+        font-size: 1.5em;
+    }
+
+    .content .header-block{
+        gap: 25px;
+    }
+}
+
+@media screen and (max-width:476px) {
+    .content .header-block .img-content{
+        width: 75%;
+    }
+
+    .content .header-block p{
+        font-size: 1em;
+    }
+
+    .content .header-block{
+        gap: 15px;
+    }
+
+    .notas-container{
+        max-width: 1000px;
+        background-color: var(--cor6);
+        padding: 50px;
+        text-align: justify;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/*CUSTOM SCROLLBAR*/
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: #00000000;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: var(--cor2);
+    border-radius: 12px;
 }
